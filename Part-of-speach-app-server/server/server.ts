@@ -11,7 +11,7 @@ const app = express();
 dotenv.config();
 
 //listening to port 8000
-const port = process.env.PORT;
+const port = process.env.PORT || 8000;
 
 //use morgan
 app.use(morgan(":method :url :status :http-version :response-time "));

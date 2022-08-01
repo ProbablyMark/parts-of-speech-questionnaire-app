@@ -1,6 +1,6 @@
-import express, { Request, Response, NextFunction } from "express";
+import { Request, Response, NextFunction } from "express";
 
-//Error MW
+//Error Middleware
 
 export const errorMiddleWare = (error: any, req: Request, res: Response, next: NextFunction) => {
     try {
