@@ -13,7 +13,6 @@ export function quizReducer(state = INITIAL_STATE, action: any) {
                 words: action.payload,
             };
         case "SET_SCORE":
-            console.log("score");
             return {
                 ...state,
                 score: action.payload,

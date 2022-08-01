@@ -6,12 +6,13 @@ import CardComponent from "../Components/CardComponent";
 export default function ResultsPage() {
     const state = useSelector((state: any) => state);
     const [rank, setRank] = useState<number>(0);
-
+    ///////////////
     async function getRank() {
         await axios.post("http://localhost:8000/rank", { score: state.score }).then((response) => {
             setRank(response.data);
         });
     }
+    //////////////////////
     useEffect(() => {
         getRank();
     }, []);

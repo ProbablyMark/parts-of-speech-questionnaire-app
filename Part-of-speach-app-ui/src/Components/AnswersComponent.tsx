@@ -12,10 +12,11 @@ export default function AnswersComponent() {
     const settingAnswer = (words: any) => {
         dispatch(setAnswer(words));
     };
-
+    //////////////
     const handle = (value: any) => {
-        settingAnswer(value.target.value);
+        settingAnswer(value.target.value); //setting anser in redux state
     };
+    //////////////radio button group
     return (
         <FormControl>
             <FormLabel id="demo-radio-buttons-group-label"> </FormLabel>
