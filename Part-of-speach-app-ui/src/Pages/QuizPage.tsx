@@ -10,8 +10,6 @@ import CardComponent from "../Components/CardComponent";
 import { setIndexArr, setUserScore, setWords, setAnswer } from "../Redux/quiz/quiz.action";
 
 export default function QuizPage() {
-    const [ans, setAns] = useState<boolean>();
-    const [open, setOpen] = useState<boolean>(false);
     //////////////
     async function getData() {
         await axios.get("http://localhost:8000/quiz").then((response) => {
@@ -54,6 +52,8 @@ export default function QuizPage() {
     const [progress, setProgress] = useState<number>(0);
     const [score, setScore] = useState<number>(0);
     const [index, setIndex] = useState<number>(0);
+    const [ans, setAns] = useState<boolean>();
+    const [open, setOpen] = useState<boolean>(false);
 
     /////////////////////
 
