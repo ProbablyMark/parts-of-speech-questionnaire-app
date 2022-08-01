@@ -4,12 +4,12 @@
 
 # content
 - client side
- - simple page to start the quiz
- - the quiz portion of which the user takes part in choosing the correct answers for the word in question
- - the rank view of which the user submits the score to the server side to recive there rank
+  - simple page to start the quiz
+  - the quiz portion of which the user takes part in choosing the correct answers for the word in question
+  - the rank view of which the user submits the score to the server side to recive there rank
 
 - server side
- - simple router to handle requests :
+  - simple router to handle requests :
   - a /quiz route that handles the words request .
   - a /rank route that handles the rank request .
 
