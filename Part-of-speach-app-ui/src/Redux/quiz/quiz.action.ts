@@ -17,3 +17,9 @@ export const setIndexArr = (payload: number) => {
         payload,
     };
 };
+export const setAnswer = (payload: number) => {
+    return {
+        type: "SET_ANSWER",
+        payload,
+    };
+};

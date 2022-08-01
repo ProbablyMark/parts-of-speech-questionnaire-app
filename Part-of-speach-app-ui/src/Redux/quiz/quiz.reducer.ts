@@ -2,6 +2,7 @@ const INITIAL_STATE = {
     words: null,
     score: 0,
     indexArr: null,
+    currAnswer: null,
 };
 
 export function quizReducer(state = INITIAL_STATE, action: any) {
@@ -21,6 +22,11 @@ export function quizReducer(state = INITIAL_STATE, action: any) {
             return {
                 ...state,
                 indexArr: action.payload,
+            };
+        case "SET_ANSWER":
+            return {
+                ...state,
+                currAnswer: action.payload,
             };
 
         default:

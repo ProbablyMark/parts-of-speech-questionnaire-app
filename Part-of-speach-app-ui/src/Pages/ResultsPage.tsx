@@ -1,9 +1,11 @@
+import { useSelector } from "react-redux";
 import CardComponent from "../Components/CardComponent";
 
 export default function ResultsPage() {
+    const state = useSelector((state: any) => state);
     return (
         <CardComponent
-            header={"Welcome to the Parts of speech quiz"}
+            header={state.score}
             content={"wanna give it a go?"}
             hasStartBtn={true}
             hasAnswers={false}

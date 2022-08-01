@@ -45,17 +45,17 @@ export default function QuizPage() {
     const [progress, setProgress] = useState<number>(0);
     const [score, setScore] = useState<number>(0);
     const [index, setIndex] = useState<number>(0);
+
     /////////////////////
 
-    let correct = true;
     ////////////////////
     const nextBtnHandler = () => {
         setProgress(progress + 10);
-        if (correct) {
+        if (state.currAnswer === state.words[state.indexArr[index]].pos) {
             setScore(score + 10);
-            setIndex(index + 1);
         }
 
+        setIndex(index + 1);
         if (progress === 100) {
             console.log(score);
             setProgress(0);
@@ -66,16 +66,18 @@ export default function QuizPage() {
     return (
         <CardComponent
             hasStartBtn={false}
-            hasAnswers={true}
+            hasAnswers={progress !== 100 && true}
             hasNextBtn={true}
-            header={state.words !== null && state.words[state.indexArr[index]].word}
+            header={
+                progress !== 100 && state.words !== null && state.words[state.indexArr[index]].word
+            }
             hasProgressBar={true}
-            content={"What do you think this word is?"}
+            content={progress !== 100 && "What do you think this word is?"}
             cardClass={
                 "col-6 text-center d-flex flex-row d-flex justify-content-around   mt-5 m-auto"
             }
             progress={progress}
-            nextBtnClass={""}
+            nextBtnClass={progress === 100 && "mt-5"}
             answersClass={""}
             nextBtnEvent={nextBtnHandler}
         ></CardComponent>
