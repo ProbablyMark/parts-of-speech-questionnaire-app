@@ -37,8 +37,8 @@ export default function QuizPage() {
     const settingUserScore = (score: number) => {
         dispatch(setUserScore(score));
     };
-    const state = useSelector((state: any) => state);
     //////////////
+    const state = useSelector((state: any) => state);
 
     const navigate = useNavigate();
     ///////////////
@@ -69,15 +69,17 @@ export default function QuizPage() {
             hasAnswers={progress !== 100 && true}
             hasNextBtn={true}
             header={
-                progress !== 100 && state.words !== null && state.words[state.indexArr[index]].word
+                progress !== 100 && state.words !== null
+                    ? state.words[state.indexArr[index]].word
+                    : "Good job"
             }
             hasProgressBar={true}
-            content={progress !== 100 && "What do you think this word is?"}
+            content={progress !== 100 ? "What do you think this word is?" : "Lets see how you did"}
             cardClass={
                 "col-6 text-center d-flex flex-row d-flex justify-content-around   mt-5 m-auto"
             }
             progress={progress}
-            nextBtnClass={progress === 100 && "mt-5"}
+            nextBtnClass={progress === 100 ? "mt-5" : ""}
             answersClass={""}
             nextBtnEvent={nextBtnHandler}
         ></CardComponent>

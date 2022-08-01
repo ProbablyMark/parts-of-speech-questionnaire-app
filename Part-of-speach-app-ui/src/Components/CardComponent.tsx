@@ -19,7 +19,7 @@ export default function CardComponent(props: any) {
                 </Typography>
                 {props.hasStartBtn && (
                     <Link to="/quiz">
-                        <Button variant="contained" className=" my-5  ">
+                        <Button variant="contained" className="my-5">
                             {props.startOrTryAgian}
                         </Button>
                     </Link>
