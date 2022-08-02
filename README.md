@@ -1,6 +1,6 @@
 # parts-of-speech-questionnaire-app
 
--   a full stack project using react for client side and node js + express for server side , all in TypeScript.
+-   a full stack project using react for client side and node.js + express for server side , all in TypeScript.
 
 # content
 
