@@ -10,7 +10,7 @@ import { useDispatch } from "react-redux";
 export default function AnswersComponent() {
     const dispatch = useDispatch();
     const settingAnswer = (words: any) => {
-        dispatch(setAnswer(words));
+        dispatch(setAnswer(words)); /// dispatcing the answer action
     };
     //////////////
     const handle = (value: any) => {

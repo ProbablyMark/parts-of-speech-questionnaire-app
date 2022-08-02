@@ -29,7 +29,7 @@ export default function QuizPage() {
     useEffect(() => {
         getData();
     }, []);
-    /////////////////////////////////
+    /////////////////////////////////dispatched actions
     const dispatch = useDispatch();
 
     const settingAnswer = (words: any) => {
@@ -44,20 +44,19 @@ export default function QuizPage() {
     const settingUserScore = (score: number) => {
         dispatch(setUserScore(score));
     };
-    //////////////
+    //////////////useselector and navigate hooks
     const state = useSelector((state: any) => state);
 
     const navigate = useNavigate();
-    ///////////////
+    ///////////////states
     const [progress, setProgress] = useState<number>(0);
     const [score, setScore] = useState<number>(0);
     const [index, setIndex] = useState<number>(0);
     const [ans, setAns] = useState<boolean>();
     const [open, setOpen] = useState<boolean>(false);
 
-    /////////////////////
+    /////////////////////next button handler to handle progress bar ,snackbar and navigation
 
-    ////////////////////
     const nextBtnHandler = () => {
         setOpen(true);
         setProgress(progress + 10);

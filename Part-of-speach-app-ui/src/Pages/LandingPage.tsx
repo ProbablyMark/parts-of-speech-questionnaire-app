@@ -1,6 +1,7 @@
 import CardComponent from "../Components/CardComponent";
 
 export default function LandingPage() {
+    //just using the card populating content with props
     return (
         <CardComponent
             header={"Welcome to the Parts of speech quiz"}

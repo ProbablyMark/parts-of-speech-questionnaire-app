@@ -8,6 +8,7 @@ export default function ResultsPage() {
     const [rank, setRank] = useState<number>(0);
     ///////////////
     async function getRank() {
+        ///axios request to get the user's score
         await axios.post("http://localhost:8000/rank", { score: state.score }).then((response) => {
             setRank(response.data);
         });
@@ -18,6 +19,7 @@ export default function ResultsPage() {
     }, []);
 
     return (
+        //the card populated with props
         <CardComponent
             header={"Your Rank is"}
             content={rank}

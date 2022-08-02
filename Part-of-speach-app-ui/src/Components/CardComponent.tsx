@@ -8,6 +8,7 @@ import { Box, Button, LinearProgress } from "@mui/material";
 import { Link } from "react-router-dom";
 
 export default function CardComponent(props: any) {
+    //reusable card in the three views
     return (
         <Card className={props.cardClass} sx={{ minWidth: 275, height: 400 }}>
             <CardContent>
